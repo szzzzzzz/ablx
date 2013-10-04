@@ -1,6 +1,7 @@
 window.onload = function dat() {
     document.getElementById("date").value = new Date().toJSON().slice(0, 10);
     document.getElementById("l1").value = localStorage.alx || "";
+    document.getElementById("la").value = localStorage.ala || "2/3【KOF】";
 };
 function bb(x) {
     var b = "";
@@ -25,6 +26,7 @@ function sub() {
         ;
         document.getElementById("message").value = txt + tx2 + "------------第二轮------------";
         localStorage.alx = document.getElementById("l1").value;
+        localStorage.ala = document.getElementById("la").value;
     } else {
         alert("2队人数不同！")
     }
