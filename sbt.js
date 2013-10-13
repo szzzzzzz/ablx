@@ -16,7 +16,7 @@ function sub() {
         a1 = document.getElementById("l3").value.split(' ').shuffle(),
         a2 = document.getElementById("l4").value.split(' ').shuffle();
     if (a1.length == a2.length) {
-        txt = "比赛： " + document.getElementById("l1").value + "     VS     " + document.getElementById("l2").value + "\n"
+        txt = "【胜】VS【负】\n"+  "比赛： " + document.getElementById("l1").value + "     VS     " + document.getElementById("l2").value + "\n"
             + "时间： " + document.getElementById("date").value + "\n"
             + "规则： " + document.getElementById("la").value + "\n"
             + "地点：" + document.getElementById("lb").value + "\n" + "------------第一轮------------" + "\n";
