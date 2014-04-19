@@ -21,30 +21,21 @@
 <div>时间：  {{date}}</div>
 <div>规则：  {{la}}</div>
 <div>地点：  {{lb}}</div>
-<div>------------第一轮------------</div>
-<div ng-repeat="item in sList">
-    {{item[0]}}
-    <select ng-model="vsn.item"  ng-change="act(vsn.item,item)">
-    <option value="">0:0</option>
-    <option >2:0</option>
-    <option >2:1</option>
-    <option >1:2</option>
-    <option >0:2</option>
-</select>{{vsn.item}}
-    {{item[1]}}
-</div>
-<div>------------第二轮------------</div>
-{{s2List}}
-<div ng-repeat="item in s2List">
-    {{item[0]}}
-    <select ng-model="vsn.item">{{orderProp}}
+
+<div ng-repeat="item in ss">
+    <div>------------第{{$index+1}}轮------------</div>
+
+<div ng-repeat="item in s[$index]">
+    {{sl1[$parent.$index][$index]}}
+    <select ng-model="vsn.item" ng-change="act(vsn.item,$index,$parent.$index)">
         <option value="">0:0</option>
         <option >2:0</option>
         <option >2:1</option>
         <option >1:2</option>
         <option >0:2</option>
     </select>{{vsn.item}}
-    {{item[1]}}
+    {{sl2[$parent.$index][$index]}}
+</div>
 </div>
 </body>
 </html>
